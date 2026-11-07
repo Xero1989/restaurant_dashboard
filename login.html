@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign In | FoodTown Admin</title>
+
+  <!-- Google Fonts (all fonts offered in the customizer) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@400;500;600;700&family=Roboto:wght@400;500;700&family=Nunito:wght@400;600;700&family=Open+Sans:wght@400;600;700&family=Lato:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN). id is required: app.js swaps this file for the RTL build -->
+  <link id="bootstrap-css" rel="stylesheet" href="assets/css/bootstrap.css">
+  <!-- Bootstrap Icons (CDN) -->
+  <link rel="stylesheet" href="assets/font/bootstrap-icons.css">
+  <!-- Template styles -->
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Template script: loaded in <head> on purpose, applies saved theme before first paint -->
+  <script src="assets/js/app.js"></script>
+</head>
+<body>
+<main class="auth-wrap">
+  <div class="card auth-card">
+    <div class="card-body p-4 p-md-5">
+      <div class="text-center mb-4">
+        <span class="brand-logo mx-auto mb-3"><i class="bi bi-egg-fried"></i></span>
+        <h1 class="h4 fw-bold">Welcome back to FoodTown</h1>
+        <p class="text-body-secondary mb-0">Sign in to manage your restaurant.</p>
+      </div>
+
+      <!-- Demo account (credentials are defined in assets/js/app.js: DEMO_LOGIN) -->
+      <div class="alert alert-info small" role="note">
+        <div class="fw-semibold mb-1"><i class="bi bi-info-circle me-1"></i>Demo account</div>
+        <div>Email: <code>admin@foodtown.com</code></div>
+        <div>Password: <code>Admin@123</code></div>
+        <button type="button" class="btn btn-sm btn-primary mt-2" id="fillDemo">Use demo credentials</button>
+      </div>
+
+      <div class="alert alert-danger small d-none" id="loginError" role="alert">Incorrect email or password. Please try again.</div>
+
+      <form id="loginForm" novalidate>
+        <div class="mb-3"><label class="form-label" for="loginEmail">Email</label>
+          <input type="email" class="form-control" id="loginEmail" placeholder="you@restaurant.com" required autocomplete="username"></div>
+        <div class="mb-3"><label class="form-label" for="loginPassword">Password</label>
+          <div class="input-group">
+            <input type="password" class="form-control" id="loginPassword" placeholder="Your password" required autocomplete="current-password">
+            <button type="button" class="btn btn-outline-secondary" id="togglePassword" aria-label="Show or hide password"><i class="bi bi-eye"></i></button>
+          </div></div>
+        <div class="d-flex justify-content-between align-items-center mb-4">
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="loginRemember"><label class="form-check-label" for="loginRemember">Remember me</label></div>
+          <a href="support.html" class="small">Need help?</a>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Sign In</button>
+      </form>
+    </div>
+  </div>
+</main>
+</body>
+</html>
